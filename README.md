@@ -18,11 +18,11 @@ This command gives the IP address of the machine where our Wazuh server is runni
 As per the screenshot we need to input the IP address of the Wazuh machine into the "Assign a Server Address" section.
 
 
-![wazuh_agent_install_ubuntu.png](https://github.com/HariPranav/Threat_Modelling_Using_Wazuh/blob/master/wazuh_agent_install_ubuntu.png?raw=true)
+![wazuh_agent_install_ubuntu.png](https://github.com/HariPranav/Threat_Modelling_Using_Wazuh/blob/master/wazuh_agent_install.png?raw=true)
 
 Then we need to run the following commands inside our new ubuntu machine as given below:
 
-![wazuh_agent_install_ubuntu.png](image.png)
+![wazuh_agent_install_ubuntu.png](https://github.com/HariPranav/Threat_Modelling_Using_Wazuh/blob/master/wazuh_agent_install_ubuntu.png?raw=true)
 
 Once all the steps have been completed successfully we can see in the Wazuh dashboard that it is getting the logs from the Wazuh dashboard. Next we are going to set up file integrity monitoring on the Ubuntu machine. Here we enable certain functionalities in which if the user downloads a file in the ubuntu machine and makes any changes to it then, the logs can be seen on the Wazuh dashboard and appropriate action can be taken on it.
 
@@ -36,7 +36,7 @@ Then add the following lines under the **syscheck** section as shown in the scre
 ```
 <directories check_all="yes" report_changes="yes" realtime="yes">/root</directories>
 ```
-![modifying_file_integrity_monitoring.png]()
+![modifying_file_integrity_monitoring.png](https://github.com/HariPranav/Threat_Modelling_Using_Wazuh/blob/master/modifying_file_integrity_monitoring.png?raw=true)
 
 Next we need to restart the Wazuh agent using the command: 
 
@@ -45,9 +45,9 @@ sudo systemctl restart wazuh-agent
 ```
 Now in the ubuntu machine we need to create a new file in the root directory then, add contents into it and then after some time delete the file. Once this is done we can switch back to the Wazuh machine and explore the logs. In the screenshot below on the Ubuntu machine we have done the same as given below:
 
-![creating_new_files_modifying_contents]()
+![creating_new_files_modifying_contents](https://github.com/HariPranav/Threat_Modelling_Using_Wazuh/blob/master/creating_new_files_modifying_contents.png?raw=true)
 
 Switching back to the Wazuh dashboard we need to navigate to Security - > Events and checking the same we can see the **Rule Id:553, 550 and 554** have details about file integrity monitoring.
 
-![wazuh_agent_file_integritymonitoring]()
+![wazuh_agent_file_integritymonitoring](https://github.com/HariPranav/Threat_Modelling_Using_Wazuh/blob/master/wazuh_agent_file_integritymonitoring.png?raw=true)
 
