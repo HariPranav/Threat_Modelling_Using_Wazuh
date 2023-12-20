@@ -24,7 +24,7 @@ Then we need to run the following commands inside our new ubuntu machine as give
 
 ![wazuh_agent_install_ubuntu.png](https://github.com/HariPranav/Threat_Modelling_Using_Wazuh/blob/master/wazuh_agent_install_ubuntu.png?raw=true)
 
-Once all the steps have been completed successfully we can see in the Wazuh dashboard that it is getting the logs from the Wazuh dashboard. Next we are going to set up file integrity monitoring on the Ubuntu machine. Here we enable certain functionalities in which if the user downloads a file in the ubuntu machine and makes any changes to it then, the logs can be seen on the Wazuh dashboard and appropriate action can be taken on it.
+Once all the steps have been completed successfully we can see in the Wazuh dashboard that it is getting the logs from the Ubuntu machine. Next we are going to set up file integrity monitoring on the Ubuntu machine. Here we enable certain functionalities in which if the user downloads a file in the ubuntu machine and makes any changes to it then, the logs can be seen on the Wazuh dashboard and appropriate action can be taken on it.
 
 Then we need to navigate to the directory on our Ubuntu machine where the agent has been installed: 
 
