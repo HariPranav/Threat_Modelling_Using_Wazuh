@@ -18,7 +18,7 @@ This command gives the IP address of the machine where our Wazuh server is runni
 As per the screenshot we need to input the IP address of the Wazuh machine into the "Assign a Server Address" section.
 
 
-![wazuh_agent_install_ubuntu.png]()
+![wazuh_agent_install_ubuntu.png](https://github.com/HariPranav/Threat_Modelling_Using_Wazuh/blob/master/wazuh_agent_install_ubuntu.png?raw=true)
 
 Then we need to run the following commands inside our new ubuntu machine as given below:
 
@@ -33,7 +33,8 @@ nano /var/etc/ossec/ossec.conf
 ```
 Then add the following lines under the **syscheck** section as shown in the screenshot below:
 
-```<directories check_all="yes" report_changes="yes" realtime="yes">/root</directories>
+```
+<directories check_all="yes" report_changes="yes" realtime="yes">/root</directories>
 ```
 ![modifying_file_integrity_monitoring.png]()
 
