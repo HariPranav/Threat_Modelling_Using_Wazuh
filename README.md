@@ -10,7 +10,8 @@ What is Wazuh and what are some of the experiments we can perform on Wazuh :
 
 From the screenshot below we need to open our terminal and type:
 
-```$ipconfig
+```
+$ipconfig
 ```
 
 This command gives the IP address of the machine where our Wazuh server is running. Then based on this information, we need to login into the Wazuh dashboard as shown in the right side of the screenshot and click on "Agents" and click on "Deploy new Agent". Then under we need to choose the platform where we need to deploy the agent for example if we have a windows machine or if we have an ubuntu based machine the commands will vary. In our case we have another instance of ubuntu in our VM. 
@@ -27,7 +28,8 @@ Once all the steps have been completed successfully we can see in the Wazuh dash
 
 Then we need to navigate to the directory on our Ubuntu machine where the agent has been installed: 
 
-```nano /var/etc/ossec/ossec.conf
+```
+nano /var/etc/ossec/ossec.conf
 ```
 Then add the following lines under the **syscheck** section as shown in the screenshot below:
 
@@ -37,7 +39,8 @@ Then add the following lines under the **syscheck** section as shown in the scre
 
 Next we need to restart the Wazuh agent using the command: 
 
-```sudo systemctl restart wazuh-agent
+```
+sudo systemctl restart wazuh-agent
 ```
 Now in the ubuntu machine we need to create a new file in the root directory then, add contents into it and then after some time delete the file. Once this is done we can switch back to the Wazuh machine and explore the logs. In the screenshot below on the Ubuntu machine we have done the same as given below:
 
