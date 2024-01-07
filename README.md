@@ -1,9 +1,10 @@
+
+![wazuh_agent_install_ubuntu.png](https://github.com/HariPranav/Threat_Modelling_Using_Wazuh/blob/master/Wazuh%20Architecture.png?raw=true)
+
 # Threat_Modelling_Using_Wazuh
 
+Wazuh is a platform which can perform threat modelling, end point security, security operations center and cloud security. It also has integrations with various network monitoring tools such as Suricata and tools such as Virus total for active threat remediation. In this blog we will explore deploy the Wazuh server on a virtual machine and deploy the Wazuh agent in another VM. Then we will integrate various tools to monitor, test and remediate malicious activity in the network.
 
-# Working with Wazuh :
-
-What is Wazuh and what are some of the experiments we can perform on Wazuh :
 
 
 # Setting up agents on Wazuh:
@@ -44,7 +45,7 @@ Next we need to restart the Wazuh agent using the command:
 ```
 sudo systemctl restart wazuh-agent
 ```
-Now in the ubuntu machine we need to create a new file in the root directory then, add contents into it and then after some time delete the file. Once this is done we can switch back to the Wazuh machine and explore the logs. In the screenshot below on the Ubuntu machine we have done the same as given below:
+Now in the ubuntu machine we need to create a new file in the root directory then, add contents into it and then after some time delete the file. Once this is done, we can switch back to the Wazuh machine and explore the logs. In the screenshot below on the Ubuntu machine we have done the same as given below:
 
 ![creating_new_files_modifying_contents](https://github.com/HariPranav/Threat_Modelling_Using_Wazuh/blob/master/creating_new_files_modifying_contents.png?raw=true)
 
@@ -70,7 +71,7 @@ sudo su
 nano /var/ossec/etc/ossec.conf
 
 ```
-In this file we need to edit check for the <syscheck> we can do this by pressing ctrl + w, in that section we need to enable realtime detection of directories and specify the directory which needs to be monitored as given below:
+In this file we need to edit check for the <syscheck> we can do this by pressing ctrl + w, in that section we need to enable real time detection of directories and specify the directory which needs to be monitored as given below:
 
 ```
 <directories realtime="yes">/root</directories>
@@ -85,7 +86,7 @@ sudo apt update
 sudo apt -y install jq
 ```
 
-After installing JQ the next step is to make sure that the threat gets removed, hence we need to navigate into the directory given below 
+After installing JQ the next step is to make sure that the threat gets removed, hence we need to navigate into the directory given below. 
 
 ```
 nano /var/ossec/active-response/bin/remove-threat.sh
@@ -238,7 +239,7 @@ sudo curl -LO https://secure.eicar.org/eicar.com && ls -lah eicar.com
 ```
 
 
-![DOwnloading_Malware_Detection]([image-3.png](https://github.com/HariPranav/Threat_Modelling_Using_Wazuh/blob/master/DOwnloading_Malware_Detection.png?raw=true))
+![DOwnloading_Malware_Detection](https://github.com/HariPranav/Threat_Modelling_Using_Wazuh/blob/master/DOwnloading_Malware_Detection.png?raw=true)
 
 The screenshot below shows the Wazuh dashboard in which the file was automatically removed along with the PID.
 
