@@ -1,11 +1,8 @@
+# Threat_Modelling_Using_Wazuh
 
 ![wazuh_agent_install_ubuntu.png](https://github.com/HariPranav/Threat_Modelling_Using_Wazuh/blob/master/Wazuh%20Architecture.png?raw=true)
 
-# Threat_Modelling_Using_Wazuh
-
 Wazuh is a platform which can perform threat modelling, end point security, security operations center and cloud security. It also has integrations with various network monitoring tools such as Suricata and tools such as Virus total for active threat remediation. In this blog we will explore deploy the Wazuh server on a virtual machine and deploy the Wazuh agent in another VM. Then we will integrate various tools to monitor, test and remediate malicious activity in the network.
-
-
 
 # Setting up agents on Wazuh:
 
